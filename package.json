@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk node_modules/nightwatch/bin/nightwatch",
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "CONSOLIDATE=1 nightwatch -c nightwatch.vrt.conf.js"
+
   },
   "keywords": [],
   "author": "",
@@ -13,5 +16,8 @@
   "devDependencies": {
     "chromedriver": "^85.0.0",
     "nightwatch": "^1.4.1"
+  },
+  "dependencies": {
+    "nightwatch-vrt": "^0.2.10"
   }
 }
