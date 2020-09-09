@@ -7,8 +7,8 @@
     "debug": "node --inspect-brk node_modules/nightwatch/bin/nightwatch",
     "test": "nightwatch",
     "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
-    "consolidate:vrt": "CONSOLIDATE=1 nightwatch -c nightwatch.vrt.conf.js"
-
+    "consolidate:vrt": "CONSOLIDATE=1 nightwatch -c nightwatch.vrt.conf.js",
+    "e2e-test": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,9 @@
     "nightwatch": "^1.4.1"
   },
   "dependencies": {
+    "cucumber": "^6.0.5",
+    "cucumber-pretty": "^6.0.0",
+    "nightwatch-api": "^3.0.1",
     "nightwatch-vrt": "^0.2.10"
   }
 }
